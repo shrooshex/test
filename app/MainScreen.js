@@ -105,11 +105,6 @@ const MainScreen = () => {
     // Another component has become the responder, so this gesture
     // should be cancelled
   };
-  const onShouldBlockNativeResponder = (e, gestureState) => {
-    // Returns whether this component should block native components from becoming the JS
-    // responder. Returns true by default. Is currently only supported on android.
-    return true;
-  };
   const gestureHandlers = PanResponder.create({
     onStartShouldSetPanResponder: _handleStartShouldSetPanResponder,
     onMoveShouldSetPanResponder: _handleMoveShouldSetPanResponder,
